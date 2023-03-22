@@ -2,44 +2,32 @@
 <html>
  <head>
    <title>Mubashir Usman</title>
-   <style>
-     #header1 {
-       font-size: 30px;
-       font-family: sans-serif;
-       color: rgb(106, 13, 0);
-       text-align: center;
-     }
-     #mainImage { 
-       display:block;
-       margin: 0 auto;
-       width: 30%;
-       }
-     h2 {
-       text-align: center;
-       font-family: "Helvetica", sans-serif;
-       font-weight: bold;
-       font-size: 25px;
-     }
-     
-     #container{
-       max-width:720px;
-       margin: 0 auto;
-     }
-     
-   </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <style>
+    #mainImage{
+      margin: 0 auto 0 auto;
+    max-height:300px;}
+  </style> 
  </head>
   <body>
-    <div id="container">
-    <h1 id="header1">Mubashir Usman - Jack of all trades</h1>
-    <img id="mainImage" src="https://jobsSiteFlask.mubashirusman.repl.co/static/img1.jpg" />
-    <h2>About me</h2>
-    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
-    <h2>Some Topics</h2>
-    <h3>What is Internet Protocol</h3>
-    <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
-      <div style="text-align:center">
-   <button>Contact Me</button> </div> 
+    <div class="container">
+    <h1 class="text-center mt-2 mb-4" id="header1">All random stuff</h1>
+    <img class="img-fluid rounded mx-auto d-block" id="mainImage" src="https://jobsSiteFlask.mubashirusman.repl.co/static/me.jpeg" />
+    <h2 class="text-center">About me</h2>
+    <p class="text-center">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+    <h2 class="text-center">Some Topics</h2>
+    <h4 class="text-center">What is Internet Protocol</h4>
+    <p class="text-center">The standard chunk of Lorem Ipsum</p>
+      <div> {% for cmd in command %}
+          <div> <h4>{{cmd['Name']}}</h4>
+                    <p>Usage: {{cmd['used']}}</p>
+          </div>
+          {% endfor %}
+      </div>
+      <div class="text-center"> <button class="btn btn-primary">Contact Me</button> </div> 
     </div>
-    <p style="font-size:12px; text-align:center">Copyright 2023 </p>
+    <p>Copyright 2023 </p>
   </body> 
 </html>
